@@ -17,6 +17,8 @@ namespace Gameplay
         GameplayController* gameplay_controller;
         StickCollectionContoller* collection_controller;
 
+        void initializeRandomSeed();
+
     public:
         GameplayService();
         ~GameplayService();

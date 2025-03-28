@@ -1,6 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include <vector>
+#include <thread>
 
 namespace Gameplay {
 
@@ -44,6 +45,8 @@ namespace Gameplay {
             void render();
 
             void reset();
+
+            void searchElement(SearchType search_type);
 
             SearchType getSearchType();
 
