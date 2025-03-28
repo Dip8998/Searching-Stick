@@ -1,32 +1,43 @@
-#include "../include/Gameplay/GameplayController.h"
+#include "Gameplay/GameplayController.h"
+#include "Gameplay/GameplayView.h"
+
 
 namespace Gameplay
 {
-    void GameplayController::destroy()
-    {
-    }
 
-    GameplayController::GameplayController()
-    {
-    }
+	void GameplayController::destroy()
+	{
+		delete(gameplay_view);
+	}
 
-    GameplayController::~GameplayController()
-    {
-    }
+	GameplayController::GameplayController()
+	{
+		gameplay_view = new GameplayView();
+	}
 
-    void GameplayController::initialize()
-    {
-    }
+	GameplayController::~GameplayController()
+	{
+		destroy();
+	}
 
-    void GameplayController::update()
-    {
-    }
+	void GameplayController::initialize()
+	{
+		gameplay_view->initialize(this);
+		reset();
+	}
 
-    void GameplayController::render()
-    {
-    }
+	void GameplayController::update()
+	{
+		gameplay_view->update();
+	}
 
-    void GameplayController::reset()
-    {
-    }
+	void GameplayController::render()
+	{
+		gameplay_view->render();
+	}
+
+	void GameplayController::reset()
+	{
+	}
+
 }
