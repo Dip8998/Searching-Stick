@@ -67,7 +67,6 @@ namespace Gameplay {
             int getNumberOfComparisons();
             int getNumberOfArrayAccess();
 
-            int getDelayMilliseconds();
             int getNumberOfSticks();
             int getDelayMilliseconds();
             sf::String getTimeComplexity();
